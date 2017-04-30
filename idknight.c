@@ -15,7 +15,7 @@ unsigned long enqueued = 0;
 unsigned long dequeued = 0;
 
 int distanceFromGoal(int row, int col, int rowGoal, int colGoal){
-	return sqrt(pow((row-rowGoal), 2) + pow((col - colGoal), 2));
+	return (sqrt(pow((row-rowGoal), 2) + pow((col - colGoal), 2)))/sqrt(5);
 }
 
 int minimumSteps(int row, int col, int rowGoal, int colGoal){
