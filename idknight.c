@@ -90,7 +90,9 @@ int knightIDS(int row, int column, int rowGoal, int columnGoal) {
 }
 
 int knightAStar(int row, int column, int rowGoal, int columnGoal, int heuristic){
-	printf("---------starting A* search---------\n---------heuristic is %d---------\n", heuristic);
+	printf("---------starting A* search---------\n");
+	if(heuristic == 1)printf("---------heuristic is Distance---------\n");
+	if(heuristic == 2)printf("---------heuristic is MinSteps---------\n");
 	initialize();
 	costShortestPath[row][column] = 0;
 	Heap q = makeHeap();
